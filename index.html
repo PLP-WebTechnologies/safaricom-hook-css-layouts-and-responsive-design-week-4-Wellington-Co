@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neton - Buy Airtime</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Neton Logo" />
+            <h1>Neton</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="text-content">
+                <h2>Buy Airtime Anytime</h2>
+                <p>Neton offers you the best deals on airtime, data bundles, and SMS bundles. Stay connected with friends and family with affordable options.</p>
+                <p>Our platform is easy to use and available on all devices, making it simple to buy airtime wherever you are. Start saving today!</p>
+            </div>
+        </section>
+        <section id="airtime">
+            <h2>Buy Airtime</h2>
+            <form action="your-backend-url" method="POST" id="airtimeForm">
+                <label for="mpesaNumber">Mpesa Number:</label>
+                <input type="tel" id="mpesaNumber" name="mpesaNumber" required />
+        
+                <label for="recipientNumber">Number to Receive Airtime:</label>
+                <input type="tel" id="recipientNumber" name="recipientNumber" required />
+        
+                <label for="amount">Airtime Amount:</label>
+                <input type="number" id="amount" name="amount" required />
+        
+                <button type="submit" id="buyButton">Buy</button>
+            </form>
+        </section>
+        
+        <script>
+            document.getElementById('airtimeForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // STK Push for payment to Mpesa number 0743714202
+                document.getElementById('airtimeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const mpesaNumber = document.getElementById('mpesaNumber').value;
+        const recipientNumber = document.getElementById('recipientNumber').value;
+        const amount = document.getElementById('amount').value;
+
+        // Simulate STK Push
+        alert(`Simulating STK Push:
+        Sending KSh ${amount} from Mpesa Number: ${mpesaNumber} 
+        to recipient number ${recipientNumber}.
+        
+        Payment will be sent to Mpesa number 0743714202 for processing.`);
+        
+        // You can also log to console for debugging or further interaction
+        console.log(`STK Push initiated:
+        Mpesa Number: ${mpesaNumber}
+        Recipient Number: ${recipientNumber}
+        Amount: KSh ${amount}
+        Payment directed to Mpesa number: 0743714202`);
+    });
+                alert("An STK Push will be initiated to send money to 0743714202.");
+            });
+        </script>
+        
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://wa.me/254743714202" target="_blank">Whatsapp</a>
+            <a href="https://www.instagram.com/itswellingtone/" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Neton. All rights reserved.</p>
+    </footer>
+</body>
+</html>
